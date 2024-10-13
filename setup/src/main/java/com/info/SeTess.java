@@ -59,6 +59,7 @@ public class SeTess {
                         String s =imageBytes.fileToBytes(screenshot);
                         map.put("question" , "What is the" +str);
                         map.put("image", s);
+                        //System.out.print(s.length());
                         screenshot.delete();         
                     }
                 }catch(Exception e){

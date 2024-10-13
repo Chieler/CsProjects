@@ -16,6 +16,9 @@ result = vqa_pipeline(image, question)
 print(f"Question: {question}")
 print(f"Answer: {result}")
 
+
+
+#print(len(data['image']))
 # for key, value in data.items():
 #     question =key
 #     context = value
