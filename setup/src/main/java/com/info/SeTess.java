@@ -53,12 +53,12 @@ public class SeTess {
                         while(!executor.executeScript("return document.readyState").equals("complete")){
                             Thread.sleep(250);
                         }
-                        executor.executeScript("document.body.style.zoom = '0.8'");
+                        executor.executeScript("document.body.style.zoom = '0.5'");
                         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
                         
                         String s =imageBytes.fileToBytes(screenshot);
-                        map.put("question" , "What is the" +str);
-                        map.put("image", s);
+                        map.put("question: what is the + str", s);
+
                         //System.out.print(s.length());
                         screenshot.delete();         
                     }

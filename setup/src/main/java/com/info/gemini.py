@@ -14,10 +14,11 @@ def init():
 if __name__ =="__main__":
     json_string = sys.argv[1]
     data = json.loads(json_string)
-    image = Image.open(BytesIO(base64.b64decode(data['image']))) 
-    question = data['question']
     model = init()
-    result = model.generate_content(
-    [image, "\n\n",question]
-    )
-    print(f"{result.text=}")
+    for key, value in data.items():
+        question = key
+        image = Image.open(BytesIO(base64.b64decode(value))) 
+        result = model.generate_content(
+        [image, "\n\n",question]
+        )
+        print(f"{result.text=}")
