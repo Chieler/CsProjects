@@ -13,7 +13,7 @@ public class ConvertPy {
     }
     public void runPyScript(){
         try{
-            processBuilder=new ProcessBuilder("/Users/lichieler/CsProjects/myenv/bin/python3", "setup/src/main/java/com/info/contextResult.py",jsonMap);
+            processBuilder=new ProcessBuilder("/Users/lichieler/CsProjects/myenv/bin/python3", "setup/src/main/java/com/info/gemini.py",jsonMap);
             Process process = processBuilder.start();
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
